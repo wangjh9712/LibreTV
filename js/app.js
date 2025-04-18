@@ -900,7 +900,10 @@ function playVideo(url, vod_name, episodeIndex = 0) {
     const playerUrl = `player.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(videoTitle)}&index=${episodeIndex}&source=${encodeURIComponent(sourceName)}`;
     
     // 在新标签页中打开播放页面
-    window.open(playerUrl, '_blank');
+    // window.open(playerUrl, '_blank');
+
+    // 在原标签页中打开播放页面
+    window.location.href = playerUrl;
 }
 
 // 播放上一集
